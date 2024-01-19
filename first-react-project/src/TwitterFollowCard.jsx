@@ -1,4 +1,4 @@
-export default function TwitterFollowCard( { network, userName, name, isFollowing}) {
+export default function TwitterFollowCard( { formatUserName,network, userName, name, isFollowing}) {
     const imageSrc =  'https://unavatar.io/'+network+'/'+userName;
     return(
         <article className='tw-followCard'>
@@ -11,7 +11,7 @@ export default function TwitterFollowCard( { network, userName, name, isFollowin
                 <strong>{name}-{network}</strong>
                 <span 
                 className='tw-followCard-infoUserName'>
-                    @{userName}
+                    {formatUserName(userName)}
                 </span>
             </div>
         </header>	
