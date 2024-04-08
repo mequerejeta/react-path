@@ -1,11 +1,16 @@
 import './App.css'
-
 import TwitterFollowCard from './TwitterFollowCard';
+import "./Styles.css";
+import { Fragment } from 'react';
 
 export default function App(){
 	const formatUserName = (userName) => '@'+userName
+	
 	return(
+		<Fragment>
+
 		<section className='App'>
+			
 			<TwitterFollowCard formatUserName={formatUserName} 
 			isFollowing={true} 
 			network="github" 
@@ -14,9 +19,9 @@ export default function App(){
 		</TwitterFollowCard>
 			<TwitterFollowCard formatUserName={formatUserName} 
 			isFollowing={false}  
-			network="youtube" 
-			userName="nojsnogain">
-			Matias Querejeta
+			network="github" 
+			userName="MarceloDanielToledo">
+			Marcelo Toledo
 		</TwitterFollowCard>
 			<TwitterFollowCard formatUserName={formatUserName} 
 			isFollowing={true} network="twitter" 
@@ -24,5 +29,7 @@ export default function App(){
 				Matias Querejeta
 			</TwitterFollowCard>
 		</section>
+		
+		</Fragment>
 	);
 }
