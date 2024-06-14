@@ -1,0 +1,83 @@
+
+   h1 {
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 800;
+        font-style: normal;
+      }
+
+      /* NORMALIZACION*/
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box; /* Esto matiene el ancho y alto a pesar de padding y border*/
+        font-family: "Montserrat", sans-serif;
+        list-style: none; 
+        text-decoration: none;
+        color: white;
+      }
+      body {
+        background-color: black; /* TODO: borrar cuando tengamos el fondo final */
+      }
+
+      header {
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 100;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 3%;
+        background-color: transparent;
+      }
+
+      .logo {
+        font-size: 30px;
+        font-weight: 800;
+      }
+      .navlist{
+        display: flex;
+      }
+    .navlist a{
+      margin-left: 60px;
+      font-size: 15px;
+      font-weight: 600;
+      border-bottom: 2px solid transparent;
+      transition: all .5s ease;
+
+    }
+    .navlist a:hover{
+      border-bottom: 2px solid white;
+    }
+    
+     #menu-icon {
+      display: none; /*Se pone none solo para que se vea cuando la pagina esta colapsada*/
+    }
+  
+    #menu-icon {
+     color: white;
+     font-size: 35px;
+     z-index: 101;
+     cursor: pointer;
+    }
+
+    #menu-toggle {
+      display: none; /* nunca quiero que se vea el checkbox*/
+    }
+    .menu-icon-action{
+      display: none; /* para que no se le pueda hacer click*/
+    }
+
+    .hero{
+      height: 100%;
+      width: 100%;
+      min-height: 100vh;
+      background: linear-gradient(245.59deg, #31494e 0%, #385E70 25%, #131313 75%);
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 2rem;
+    }
