@@ -23,6 +23,7 @@ Feel free to review my code, suggest improvements, or point out errors. I apprec
 
 In addition to the official React documentation, I'm also leveraging various online courses to strengthen my skills. Some of the resources I'm using include:
 
+- [React Developer Digital House Course](https://www.digitalhouse.com/ar/productos/programacion/react-developer)
 - [Midudev Course](https://www.youtube.com/playlist?list=PLUofhDIg_38q4D0xNWp7FEHOTcZhjWJ29)
 - [The Odin Project Course](https://www.theodinproject.com/paths/full-stack-javascript/courses/react)
 - [Official React Documentation](https://react.dev/learn)

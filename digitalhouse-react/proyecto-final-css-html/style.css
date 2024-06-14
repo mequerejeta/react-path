@@ -74,10 +74,10 @@
       height: 100%;
       width: 100%;
       min-height: 100vh;
-      background: linear-gradient(245.59deg, #31494e 0%, #385E70 25%, #131313 75%);
-      position: relative;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
+      background: linear-gradient(245.59deg, #31494e 0%, #385E70 25%, #131313 75%); /*fondo color gradiente*/
+      position: relative; /*Para que sea relativo al contenedor(nos permite usar top,bottom, left,right)*/
+      display: grid; /*para que el hero se pueda dividir en dos columnas*/
+      grid-template-columns: 1fr 1fr; /*dos columnas*/
+      align-items: center; /*alinear verticalmente el hero*/
       gap: 2rem;
     }
