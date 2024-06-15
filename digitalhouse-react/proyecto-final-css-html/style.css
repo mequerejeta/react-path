@@ -105,15 +105,18 @@
       margin-bottom: 40px;
       line-height: 1.9;
     }
+  
     .hero-img img{
       width:  400px;
       margin: 10% 0 0 10%;
+      border-radius: 30px;
       height: auto;
       transition:  all 5s linear; /* eso hace que la transicion sea linear*/
     }
     .hero-img img:hover{
       width: 450px;
       opacity: 0.6;
+      
     }
     .hero-text a{
       display: inline-block;
