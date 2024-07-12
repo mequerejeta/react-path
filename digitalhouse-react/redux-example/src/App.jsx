@@ -1,19 +1,23 @@
-import './App.css'
+import "./App.css";
 
-import Contador from "./components/Contador";
-import { Provider } from 'react-redux'
-import store from "./store"
+import  Contador  from "./components/Contador";
+import { Pokemons } from './components/Pokemons';
+import {Provider} from "react-redux";
+import store from "./store";
 
 function App() {
-
-  return (
-    <Provider store={store}>
-        <div>
-          <h1>Redux Toolkit</h1>
-          {<Contador/>}
-        </div>
-    </Provider>
-  ) 
+	return (
+		<Provider store={store}>
+			<div className="App">
+				<header className="App-header">
+					{/* <h1>React + Redux</h1> */}
+				<Contador/>
+					{/* <ShoppingCart /> */}
+				<Pokemons />
+				</header>
+			</div>
+		</Provider>
+	);
 }
 
-export default App
+export default App;

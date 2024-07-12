@@ -1,25 +1,43 @@
-import { useDispatch, useSelector } from 'react-redux'
-export const  Pokemons = () => {
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect, useState } from 'react';
 
-    const {isLoading, pokemons = [], page, error } = useSelector(state => state.pokemons)
-    const dispatch = useDispatch()
-    useEffect(() => {
-        
-       dispatch(getPokemons())
-    }, []);
-    return(
-        <div>
-            <h1>Pokemons</h1>
-            {error && <p>Algo a salido mal</p>}
-            {isLoading && <p>Cargando ....</p> }
-            <div>
-                {pokemons.map((pokemon) => (
-                   <p key={pokemon.name}>{pokemon.name}</p> 
-                ))}
-            </div>
-            <button onClick = {() => dispatch(getPokemons(page))}>
-                Next Page
-            </button>
-        </div>
-    )
+import { fetchPokemons } from '../reducers/apiSlice';
+
+// import { getPokemons } from '../reducers/thunk/thunk';
+
+
+export const Pokemons = () => {
+
+  const [localPage, setLocalPage] = useState(0);
+
+  const dispatch = useDispatch();
+  const { isLoading, pokemons = [] } = useSelector(state => state.pokemons);
+  
+  console.log(pokemons);
+  useEffect(() => {
+    dispatch( fetchPokemons(localPage) );    
+  }, [localPage])
+
+  return (
+    <>
+        <h1>Pokemons</h1>
+        <hr />
+        <span>Loading: { isLoading ? 'True': 'False' }</span>
+
+        <ul>
+          {
+            pokemons.map( ({ name }) => (
+              <li key={ name }>{ name }</li>
+            ))
+          }
+        </ul>
+
+        <button
+          disabled={ isLoading }
+          onClick={() => setLocalPage(localPage + 1)}
+        >
+          Next
+        </button>
+    </>
+  )
 }
